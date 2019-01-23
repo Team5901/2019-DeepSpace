@@ -12,6 +12,8 @@
 package org.usfirst.frc5901.DeepSpace;
 
 import org.usfirst.frc5901.DeepSpace.commands.*;
+
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 

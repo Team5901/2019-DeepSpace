@@ -19,16 +19,8 @@ public class Elevator extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private WPI_TalonSRX leftElevatorMotor;
-  private WPI_TalonSRX rightElevatorMotor;
-
-  public Elevator(){
-
-    leftElevatorMotor = new WPI_TalonSRX(1);
-    rightElevatorMotor = new WPI_TalonSRX(2);
-    
-
-  }
+  WPI_TalonSRX leftElevatorMotor = new WPI_TalonSRX(1);
+  WPI_TalonSRX rightElevatorMotor = new WPI_TalonSRX(2);;
 
   public void stopElevator(){
     leftElevatorMotor.set(0.0);

@@ -7,12 +7,16 @@
 
 package org.usfirst.frc5901.DeepSpace.commands;
 
+import org.usfirst.frc5901.DeepSpace.Robot;
+
 import edu.wpi.first.wpilibj.command.Command;
 
-public class HatchIn extends Command {
-  public HatchIn() {
+public class HatchGrabbing extends Command {
+
+  public HatchGrabbing() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
+    requires(Robot.arm);
   }
 
   // Called just before this Command runs the first time

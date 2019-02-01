@@ -5,39 +5,35 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc5901.DeepSpace.subsystems;
+package org.usfirst.frc5901.DeepSpace.subsystems.manipulation;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import org.usfirst.frc5901.DeepSpace.Robot;
+import org.usfirst.frc5901.DeepSpace.subsystems.motion.SolenoidState;
+
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc5901.DeepSpace.commands.*;
 
 /**
  * Add your docs here.
  */
-public class Elevator extends Subsystem {
+public class Forearm extends Subsystem implements SolenoidState {
+
+  private Solenoid solenoid = new Solenoid(2);
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-
-  WPI_TalonSRX leftElevatorMotor = new WPI_TalonSRX(1);
-  WPI_TalonSRX rightElevatorMotor = new WPI_TalonSRX(2);;
-
-  public void stopElevator(){
-    leftElevatorMotor.set(0.0);
-    rightElevatorMotor.set(0.0);
-  }
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand()
-    
-    
-    
-    
-    
-    
-    
-    
+    // setDefaultCommand(new MySpecialCommand());
   }
+
+  public void extend() {
+    this.solenoid.set(ON);
+  }
+
+  public void compress() {
+    this.solenoid.set(OFF);
+  }
+
 }

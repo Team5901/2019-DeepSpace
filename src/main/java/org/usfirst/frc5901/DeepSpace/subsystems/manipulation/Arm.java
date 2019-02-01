@@ -5,26 +5,36 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc5901.DeepSpace.subsystems;
+package org.usfirst.frc5901.DeepSpace.subsystems.manipulation;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
  */
-public class HatchIntake extends Subsystem {
+public class Arm extends Subsystem {
 
-  WPI_VictorSPX HatchIntakeMotor = new WPI_VictorSPX(1);
+  //All Selenoids are instantiated in Forearm and Hand
+  private Compressor compressor = new Compressor(0);
+  private Forearm forearm = new Forearm();
+  private Hand hand = new Hand();
 
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+  }
+
+  public void grasp() {
+    this.forearm.extend();
+    this.hand.open();
+  }
+
+  public void release() {
+    this.hand.close();
+    this.forearm.compress();
   }
 }

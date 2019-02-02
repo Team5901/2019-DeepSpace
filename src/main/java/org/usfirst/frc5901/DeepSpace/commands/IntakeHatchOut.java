@@ -7,20 +7,12 @@
 
 package org.usfirst.frc5901.DeepSpace.commands;
 
-import java.awt.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
 
-
-public class IntakeIn extends Command {
-  public IntakeIn() {
-    requires(Robot.class);
-  }
+public class IntakeHatchOut extends Command {
+  public IntakeHatchOut() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-  
-
-  private void requires(Class<Robot> class1) {
   }
 
   // Called just before this Command runs the first time
@@ -49,4 +41,10 @@ public class IntakeIn extends Command {
   @Override
   protected void interrupted() {
   }
+
+public static void set() {
+}
+
+public static void setOpenLoopControl() {
+}
 }

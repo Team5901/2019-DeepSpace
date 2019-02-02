@@ -10,6 +10,9 @@ package org.usfirst.frc5901.DeepSpace.subsystems;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import org.usfirst.frc5901.DeepSpace.commands.IntakeHatchIn;
+import org.usfirst.frc5901.DeepSpace.commands.IntakeHatchOut;
+
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
@@ -19,25 +22,41 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class HatchIntake extends Subsystem {
-  private WPI_VictorSPX HatchIntakeMotor= new WPI_VictorSPX(0);
+  private static final String IntakeHatch = null;
+  /**
+   *
+   */
+
+  private static final String INTAKEHATCH = IntakeHatch;
+  private WPI_VictorSPX HatchIntakeMotor = new WPI_VictorSPX(0);
   private Compressor CompressorOne = new Compressor(0);
   private Solenoid SolenoidOne = new Solenoid(0);
   private DoubleSolenoid DoubleOne = new DoubleSolenoid(1,2);
+  private IntakeHatchIn HatchIn = new IntakeHatchIn();
+  private IntakeHatchOut HatchOut = new IntakeHatchOut();
 
-  
+
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-  
-   
-  
-   public void PistonIn(){
 
-    SolenoidOne.set(true);
-    SolenoidOne.set(false);
+  public void IntakeHatchOut(){
+    IntakeHatchOut.setOpenLoopControl();
+}
+  public void IntakeHatchIn(){
+    IntakeHatchIn.setClosedLoopControl();
+
+
+   }
+  public void PistonIn(){
+   DoubleOne.set(DoubleSolenoid.Value.kForward);
+ 
+  } 
+  
+  public void PistonOut(){
+    DoubleOne.set(DoubleSolenoid.Value.kReverse);
 
   }
-  public void StopIntakeIn(){
-  }
+
   public void CompressorOn(){
     CompressorOne.setClosedLoopControl(true);
   }

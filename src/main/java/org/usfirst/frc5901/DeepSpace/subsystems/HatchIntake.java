@@ -22,7 +22,7 @@ public class HatchIntake extends Subsystem {
   private WPI_VictorSPX HatchIntakeMotor= new WPI_VictorSPX(0);
   private Compressor CompressorOne = new Compressor(0);
   private Solenoid SolenoidOne = new Solenoid(0);
-  private DoubleSolenoid DoubleOne = new DoubleSolenoid(0, 0);
+  private DoubleSolenoid DoubleOne = new DoubleSolenoid(1,2);
 
   
   // Put methods for controlling this subsystem

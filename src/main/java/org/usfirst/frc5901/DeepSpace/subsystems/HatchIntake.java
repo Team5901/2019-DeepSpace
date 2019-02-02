@@ -30,23 +30,17 @@ public class HatchIntake extends Subsystem {
   private static final String INTAKEHATCH = IntakeHatch;
   private WPI_VictorSPX HatchIntakeMotor = new WPI_VictorSPX(0);
   private Compressor CompressorOne = new Compressor(0);
-  private Solenoid SolenoidOne = new Solenoid(0);
   private DoubleSolenoid DoubleOne = new DoubleSolenoid(1,2);
-  private IntakeHatchIn HatchIn = new IntakeHatchIn();
-  private IntakeHatchOut HatchOut = new IntakeHatchOut();
-
 
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   public void IntakeHatchOut(){
-    IntakeHatchOut.setOpenLoopControl();
-}
+    DoubleOne.set(DoubleSolenoid.Value.kReverse);
+  }
   public void IntakeHatchIn(){
-    IntakeHatchIn.setClosedLoopControl();
-
-
-   }
+    DoubleOne.set(DoubleSolenoid.Value.kForward);
+       }
   public void PistonIn(){
    DoubleOne.set(DoubleSolenoid.Value.kForward);
  

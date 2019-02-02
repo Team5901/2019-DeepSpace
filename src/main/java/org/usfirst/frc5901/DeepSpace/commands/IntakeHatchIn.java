@@ -22,12 +22,13 @@ public class IntakeHatchIn extends Command {
   @Override
   protected void initialize() {
     System.out.println("HatchIntakeIn");
-    Robot.hatchIntake.PistonIn();
+
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.hatchIntake.PistonOut();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -46,12 +47,7 @@ public class IntakeHatchIn extends Command {
   @Override
   protected void interrupted() {
     System.out.println("HatchOut");
-   ((HatchIntake) Robot.hatchOut).PistonOut();
+    Robot.hatchIntake.PistonIn();
 
   }
-
-public static void setClosedLoopControl() {
 }
-
-}
-

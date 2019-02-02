@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc5901.DeepSpace.subsystems.manipulation;
+package org.usfirst.frc5901.DeepSpace.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import org.usfirst.frc5901.DeepSpace.Robot;

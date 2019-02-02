@@ -10,22 +10,42 @@ package org.usfirst.frc5901.DeepSpace.subsystems.manipulation;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
  */
 public class HatchIntake extends Subsystem {
-  private WPI_VictorSPX HatchIntakeMotor;
+  private WPI_VictorSPX HatchIntakeMotor= new WPI_VictorSPX(0);
+  private Compressor CompressorOne = new Compressor(0);
+  private Solenoid SolenoidOne = new Solenoid(0);
+  private DoubleSolenoid DoubleOne = new DoubleSolenoid(0, 0);
 
-public HatchIntake() {
-    HatchIntakeMotor = new WPI_VictorSPX(1);
-
-}
+  
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
+  
+   
+  
+   public void PistonIn(){
 
-  @Override
+    SolenoidOne.set(true);
+    SolenoidOne.set(false);
+
+  }
+  public void StopIntakeIn(){
+  }
+  public void CompressorOn(){
+    CompressorOne.setClosedLoopControl(true);
+  }
+  public void CompressorOff(){
+    CompressorOne.setClosedLoopControl(false);
+  }
+    @Override
+
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());

@@ -5,19 +5,20 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc5901.DeepSpace.subsystems.manipulation;
+package org.usfirst.frc5901.DeepSpace.subsystems;
 
-import org.usfirst.frc5901.DeepSpace.subsystems.motion.SolenoidState;
+import org.usfirst.frc5901.DeepSpace.subsystems.SolenoidState;
 
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
  */
-public class Hand extends Subsystem implements SolenoidState {
+public class Forearm extends Subsystem implements SolenoidState {
 
-  private Solenoid selenoid = new Solenoid(1);
+  private Solenoid solenoid = new Solenoid(2);
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -27,15 +28,12 @@ public class Hand extends Subsystem implements SolenoidState {
     // setDefaultCommand(new MySpecialCommand());
   }
 
-  //For grabbing hatch
-  public void open() {
-    this.selenoid.set(ON);
+  public void extend() {
+    this.solenoid.set(ON);
   }
 
-  //For releasing hatch
-  public void close() {
-    this.selenoid.set(OFF);
+  public void compress() {
+    this.solenoid.set(OFF);
   }
 
-  
 }

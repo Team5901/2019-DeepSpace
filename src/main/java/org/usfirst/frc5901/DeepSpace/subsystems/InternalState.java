@@ -5,36 +5,20 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc5901.DeepSpace.subsystems.manipulation;
+package org.usfirst.frc5901.DeepSpace.subsystems;
 
-import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
  */
-public class Arm extends Subsystem {
-
-  //All Selenoids are instantiated in Forearm and Hand
-  private Compressor compressor = new Compressor(0);
-  private Forearm forearm = new Forearm();
-  private Hand hand = new Hand();
-
+public class InternalState extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
+
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
-  }
-
-  public void grasp() {
-    this.forearm.extend();
-    this.hand.open();
-  }
-
-  public void release() {
-    this.hand.close();
-    this.forearm.compress();
   }
 }

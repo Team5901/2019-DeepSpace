@@ -1,4 +1,4 @@
-package org.usfirst.frc5901.DeepSpace.subsystems.motion;
+package org.usfirst.frc5901.DeepSpace.subsystems;
 
 public interface SolenoidState {
 

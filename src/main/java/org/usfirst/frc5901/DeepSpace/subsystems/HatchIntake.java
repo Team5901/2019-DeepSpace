@@ -22,12 +22,6 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class HatchIntake extends Subsystem {
-  private static final String IntakeHatch = null;
-  /**
-   *
-   */
-
-  private static final String INTAKEHATCH = IntakeHatch;
   private WPI_VictorSPX HatchIntakeMotor = new WPI_VictorSPX(0);
   private Compressor CompressorOne = new Compressor(0);
   private DoubleSolenoid DoubleOne = new DoubleSolenoid(1,2);
@@ -38,22 +32,23 @@ public class HatchIntake extends Subsystem {
   public void IntakeHatchOut(){
     DoubleOne.set(DoubleSolenoid.Value.kReverse);
   }
+
   public void IntakeHatchIn(){
     DoubleOne.set(DoubleSolenoid.Value.kForward);
-       }
+  }
+
   public void PistonIn(){
    DoubleOne.set(DoubleSolenoid.Value.kForward);
- 
-  } 
-  
+  }   
+
   public void PistonOut(){
     DoubleOne.set(DoubleSolenoid.Value.kReverse);
-
   }
 
   public void CompressorOn(){
     CompressorOne.setClosedLoopControl(true);
   }
+  
   public void CompressorOff(){
     CompressorOne.setClosedLoopControl(false);
   }

@@ -7,16 +7,12 @@
 
 package org.usfirst.frc5901.DeepSpace.commands;
 
-import org.usfirst.frc5901.DeepSpace.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
 
-public class HatchGrabbing extends Command {
-
-  public HatchGrabbing() {
+public class IntakeHatchOut extends Command {
+  public IntakeHatchOut() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.arm);
   }
 
   // Called just before this Command runs the first time
@@ -45,4 +41,10 @@ public class HatchGrabbing extends Command {
   @Override
   protected void interrupted() {
   }
+
+public static void set() {
+}
+
+public static void setOpenLoopControl() {
+}
 }

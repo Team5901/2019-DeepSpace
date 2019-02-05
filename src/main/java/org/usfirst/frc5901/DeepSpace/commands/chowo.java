@@ -9,8 +9,8 @@ package org.usfirst.frc5901.DeepSpace.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeOut extends Command {
-  public IntakeOut() {
+public class chowo extends Command {
+  public chowo() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }

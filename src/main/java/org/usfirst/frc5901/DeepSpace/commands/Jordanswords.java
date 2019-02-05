@@ -11,12 +11,12 @@ import org.usfirst.frc5901.DeepSpace.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class HatchRealising extends Command {
-
-  public HatchRealising() {
+// LEVEL THREE OF ELEVATOR
+public class Jordanswords extends Command {
+  public Jordanswords() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.arm);
+    requires(Robot.elevator);
   }
 
   // Called just before this Command runs the first time

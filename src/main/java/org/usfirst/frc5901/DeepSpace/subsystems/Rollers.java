@@ -8,44 +8,48 @@
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import org.usfirst.frc5901.DeepSpace.Robot;
+
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc5901.DeepSpace.commands.*;
 
 /**
  * Add your docs here.
  */
-public class Elevator extends Subsystem {
+public class Rollers extends Subsystem implements MotorSpeeds {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private WPI_TalonSRX leftElevatorMotor;
-  private WPI_TalonSRX rightElevatorMotor;
+  private WPI_TalonSRX rolliepollie;
 
-  public Elevator(){
-
-    leftElevatorMotor = new WPI_TalonSRX(1);
-    rightElevatorMotor = new WPI_TalonSRX(2);
-    
-
+  //Constructor
+  public Rollers() {
+    //Im not sure if 3 is gonna be the port we're using
+    rolliepollie = new WPI_TalonSRX(3);
   }
 
-  public void stopElevator(){
-    leftElevatorMotor.set(0.0);
-    rightElevatorMotor.set(0.0);
+  //Two methods for rolling in and rolling out
+  //Roll in
+  public void blackhole() {
+    rolliepollie.set(yoboimovin);
+  }
+  //Roll out
+  public void whitehole() {
+    rolliepollie.set(backupbro);
+  }
+
+  //stopping
+  public void caviera() {
+    rolliepollie.set(iguessillstop);
   }
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand()
-    
-    
-    
-    
-    
-    
-    
-    
+    // setDefaultCommand(new MySpecialCommand());
   }
+
+
+
+
+
+
 }

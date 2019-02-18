@@ -7,6 +7,8 @@
 
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import org.usfirst.frc5901.DeepSpace.subsystems.SolenoidState;
 
 import edu.wpi.first.wpilibj.Compressor;
@@ -18,7 +20,19 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Forearm extends Subsystem implements SolenoidState {
 
-  private Solenoid solenoid = new Solenoid(2);
+  private WPI_TalonSRX ForearmMotor;
+
+  public Forearm() {
+    ForearmMotor=new WPI_TalonSRX(6);
+    
+    int sensorPos=0;
+    ForearmMotor.setSelectedSensorPosition(sensorPos, 0,10);
+    ForearmMotor.configForwardSoftLimitThreshold(10,0);
+    ForearmMotor.configReverseSoftLimitThreshold(-10,0);
+    ForearmMotor.configForwardSoftLimitEnable(true,0);
+    ForearmMotor.configReverseSoftLimitEnable(true,0);
+
+  }
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -28,12 +42,17 @@ public class Forearm extends Subsystem implements SolenoidState {
     // setDefaultCommand(new MySpecialCommand());
   }
 
-  public void extend() {
-    this.solenoid.set(ON);
+  public void RiseArm() {
+    ForearmMotor.set(-0.2);
+  }
+   
+  public void FallArm(){
+    System.out.println("Sensor Pos:" + ForearmMotor.getSelectedSensorPosition());
+   ForearmMotor.set(0.2);
   }
 
-  public void compress() {
-    this.solenoid.set(OFF);
+  public void StopArm(){
+    System.out.println("Sensor Pos:" + ForearmMotor.getSelectedSensorPosition());
+    ForearmMotor.set(0.0);
   }
-
 }

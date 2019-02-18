@@ -8,6 +8,7 @@
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -18,12 +19,12 @@ public class Rollers extends Subsystem implements MotorSpeeds {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private WPI_TalonSRX rolliepollie;
+  private WPI_VictorSPX rolliepollie;
 
   //Constructor
   public Rollers() {
     //Im not sure if 3 is gonna be the port we're using
-    rolliepollie = new WPI_TalonSRX(3);
+    rolliepollie = new WPI_VictorSPX(8);
   }
 
   //Two methods for rolling in and rolling out

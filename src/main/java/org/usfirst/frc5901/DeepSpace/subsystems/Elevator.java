@@ -8,6 +8,8 @@
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+
 import org.usfirst.frc5901.DeepSpace.Robot;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc5901.DeepSpace.commands.*;
@@ -19,20 +21,36 @@ public class Elevator extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private WPI_TalonSRX leftElevatorMotor;
-  private WPI_TalonSRX rightElevatorMotor;
+  private WPI_VictorSPX leftElevatorMotor;
+  private WPI_VictorSPX rightElevatorMotor;
 
   public Elevator(){
 
-    leftElevatorMotor = new WPI_TalonSRX(1);
-    rightElevatorMotor = new WPI_TalonSRX(2);
-    
+    leftElevatorMotor = new WPI_VictorSPX(5);
+    rightElevatorMotor = new WPI_VictorSPX(7);
 
+    //int sensorPos=0;
+    //leftElevatorMotor.setSelectedSensorPosition(sensorPos, 0,10);
+    //rightElevatorMotor.set(com.ctre.phoenix.motorcontrol.ControlMode.Follower, 5);
+    //leftElevatorMotor.configForwardSoftLimitThreshold(10000,0);
+    //leftElevatorMotor.configReverseSoftLimitThreshold(0,0);
+    leftElevatorMotor.configForwardSoftLimitEnable(false, 0);
+    leftElevatorMotor.configReverseSoftLimitEnable(false, 0);
   }
 
-  public void stopElevator(){
+  public void elevatorStop(){
     leftElevatorMotor.set(0.0);
     rightElevatorMotor.set(0.0);
+  }
+
+  public void elevatorUp(){
+    leftElevatorMotor.set(-0.5);
+    rightElevatorMotor.set(-0.5);
+  }
+
+  public void elevatorDown(){
+    leftElevatorMotor.set(0.2);
+    rightElevatorMotor.set(0.2);
   }
 
   @Override

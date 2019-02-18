@@ -7,6 +7,8 @@
 
 package org.usfirst.frc5901.DeepSpace.commands;
 
+import org.usfirst.frc5901.DeepSpace.Robot;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 public class ElevatorUp extends Command {
@@ -18,11 +20,13 @@ public class ElevatorUp extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    System.out.println("Elevator Up");
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+      Robot.elevator.elevatorUp();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -34,11 +38,14 @@ public class ElevatorUp extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    Robot.elevator.elevatorStop();
+    System.out.println("STOP elevator");
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
+    end();
   }
 }

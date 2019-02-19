@@ -21,16 +21,16 @@ public class Elevator extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private WPI_VictorSPX leftElevatorMotor;
-  private WPI_VictorSPX rightElevatorMotor;
+  private WPI_TalonSRX leftElevatorMotor;
+  private WPI_TalonSRX rightElevatorMotor;
 
   public Elevator(){
 
-    leftElevatorMotor = new WPI_VictorSPX(5);
-    rightElevatorMotor = new WPI_VictorSPX(7);
+    leftElevatorMotor = new WPI_TalonSRX(5);
+    rightElevatorMotor = new WPI_TalonSRX(7);
 
-    //int sensorPos=0;
-    //leftElevatorMotor.setSelectedSensorPosition(sensorPos, 0,10);
+    int sensorPos=0;
+    leftElevatorMotor.setSelectedSensorPosition(sensorPos, 0,10);
     //rightElevatorMotor.set(com.ctre.phoenix.motorcontrol.ControlMode.Follower, 5);
     //leftElevatorMotor.configForwardSoftLimitThreshold(10000,0);
     //leftElevatorMotor.configReverseSoftLimitThreshold(0,0);
@@ -44,8 +44,8 @@ public class Elevator extends Subsystem {
   }
 
   public void elevatorUp(){
-    leftElevatorMotor.set(-0.5);
-    rightElevatorMotor.set(-0.5);
+    leftElevatorMotor.set(-0.2);
+    rightElevatorMotor.set(-0.2);
   }
 
   public void elevatorDown(){

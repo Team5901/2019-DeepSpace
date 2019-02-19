@@ -22,7 +22,6 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class HatchIntake extends Subsystem {
-  private WPI_VictorSPX HatchIntakeMotor = new WPI_VictorSPX(0);
   private Compressor CompressorOne = new Compressor(0);
   private DoubleSolenoid DoubleOne = new DoubleSolenoid(1,2);
 

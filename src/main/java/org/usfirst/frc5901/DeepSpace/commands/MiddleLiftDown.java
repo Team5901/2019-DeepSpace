@@ -8,12 +8,11 @@
 package org.usfirst.frc5901.DeepSpace.commands;
 
 import org.usfirst.frc5901.DeepSpace.Robot;
-import org.usfirst.frc5901.DeepSpace.subsystems.HatchIntake;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeHatchIn extends Command {
-  public IntakeHatchIn() {
+public class MiddleLiftDown extends Command {
+  public MiddleLiftDown() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -21,14 +20,13 @@ public class IntakeHatchIn extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("HatchIntakeIn");
-
+    System.out.println("Drop Middle");
+    Robot.lift.DropMiddleSolenoid();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.hatchIntake.PistonOut();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -40,8 +38,6 @@ public class IntakeHatchIn extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    System.out.println("HatchOut");
-    Robot.hatchIntake.PistonIn();
   }
 
   // Called when another command which requires one or more of the same
@@ -49,6 +45,5 @@ public class IntakeHatchIn extends Command {
   @Override
   protected void interrupted() {
     end();
-
   }
 }

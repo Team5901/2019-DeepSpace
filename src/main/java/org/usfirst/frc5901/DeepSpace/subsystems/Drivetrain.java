@@ -155,14 +155,14 @@ public class Drivetrain extends Subsystem {
      //%%%%%%%%%% Main driving command - has turbo button. Press for slower control %%%%%%%%%%
      public void drive(){
          
-         move = Robot.oi.controller1.getRawAxis(1);
-         rotate = Robot.oi.controller1.getRawAxis(4);
+         move = Robot.oi.controller0.getRawAxis(1);
+         rotate = Robot.oi.controller0.getRawAxis(4);
          
-         //move = Math.pow(move,3);       //Cubed to make response better
-         //rotate = Math.pow(move,3);     //Cubed to make response better         
+         //move = Math.pow(move,2);       //Cubed to make response better
+         //rotate = Math.pow(move,2);     //Cubed to make response better         
          
          
-         if (Robot.oi.controller1.getRawButton(6)){
+         if (Robot.oi.controller0.getRawButton(6)){
             cougarDrive.arcadeDrive(move, rotate, true);
          }
          else{					

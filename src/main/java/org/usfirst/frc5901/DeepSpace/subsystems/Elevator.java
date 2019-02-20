@@ -44,13 +44,13 @@ public class Elevator extends Subsystem {
   }
 
   public void elevatorUp(){
-    leftElevatorMotor.set(-0.2);
-    rightElevatorMotor.set(-0.2);
+    leftElevatorMotor.set(-0.4);
+    rightElevatorMotor.set(-0.4);
   }
 
   public void elevatorDown(){
-    leftElevatorMotor.set(0.2);
-    rightElevatorMotor.set(0.2);
+    leftElevatorMotor.set(0.3);
+    rightElevatorMotor.set(0.3);
   }
 
   @Override

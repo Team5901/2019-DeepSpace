@@ -7,7 +7,6 @@
 
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
-import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -15,7 +14,6 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class Lift extends Subsystem {
-  private Compressor CompressorOne = new Compressor(0);
   private Solenoid RearOne = new Solenoid(3);
   private Solenoid MiddlesoulSolenoid  = new Solenoid(4);
   // Put methods for controlling this subsystem

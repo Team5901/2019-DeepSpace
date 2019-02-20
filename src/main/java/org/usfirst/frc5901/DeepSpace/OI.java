@@ -62,8 +62,12 @@ public class OI {
 
     public OI() {
         
+        // First Controller 
+        // Functionality:
+        // Driver train, elevator, pistons (lifting)
         controller0 = new Joystick(0);
         
+        // 
         JoystickButton buttonA_1 = new JoystickButton(controller0, 1);
         JoystickButton buttonB_1 = new JoystickButton(controller0, 2);
         JoystickButton buttonX_1 = new JoystickButton(controller0, 3);

@@ -6,7 +6,7 @@ public interface MotorSpeeds {
     //this is dummy data
     //we need the actual speeds of each step
     static final double iguessillstop = 0.0;
-    static final double yoboimovin = 15.25;
-    static final double backupbro = -15.25;
+    static final double yoboimovin =.5;
+    static final double backupbro = -.5;
    
 }

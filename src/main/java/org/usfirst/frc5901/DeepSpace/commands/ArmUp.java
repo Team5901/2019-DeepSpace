@@ -11,8 +11,8 @@ import org.usfirst.frc5901.DeepSpace.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class ElevatorDown extends Command {
-  public ElevatorDown() {
+public class ArmUp extends Command {
+  public ArmUp() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -20,13 +20,13 @@ public class ElevatorDown extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("elevator DOWN");
+    System.out.println("Arm Up");
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.elevator.elevatorDown();
+    Robot.forearm.RiseArm();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -38,14 +38,13 @@ public class ElevatorDown extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.elevator.elevatorStop();
-    System.out.println("STOP elevator");
+    System.out.println("Arm Stop");
+    Robot.forearm.StopArm();
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
-    end();
   }
 }

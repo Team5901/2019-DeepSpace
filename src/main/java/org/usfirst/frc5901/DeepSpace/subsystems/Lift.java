@@ -7,23 +7,35 @@
 
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
  */
-public class HatchIntake_test extends Subsystem {
-  private WPI_VictorSPX HatchIntakeMotor;
-
-public HatchIntake_test() {
-    HatchIntakeMotor = new WPI_VictorSPX(1);
-
-}
+public class Lift extends Subsystem {
+  private Compressor CompressorOne = new Compressor(0);
+  private Solenoid RearOne = new Solenoid(3);
+  private Solenoid MiddlesoulSolenoid  = new Solenoid(4);
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
+
+public void RaiseRear(){
+  RearOne.set(true);
+}
+public void DropRear() {
+  RearOne.set(false);
+
+}
+
+public void RaiseMiddleSolenoid(){
+  MiddlesoulSolenoid.set(true);
+}
+public void DropMiddleSolenoid() {
+  MiddlesoulSolenoid.set(false);
+
+}
 
   @Override
   public void initDefaultCommand() {

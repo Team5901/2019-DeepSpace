@@ -7,10 +7,12 @@
 
 package org.usfirst.frc5901.DeepSpace.commands;
 
+import org.usfirst.frc5901.DeepSpace.Robot;
+
 import edu.wpi.first.wpilibj.command.Command;
 
-public class chowo extends Command {
-  public chowo() {
+public class BallEnter extends Command {
+  public BallEnter() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -18,11 +20,13 @@ public class chowo extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    System.out.println("Ball Enter");
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.rollers.blackhole();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -34,11 +38,14 @@ public class chowo extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    System.out.println("Ball stop");
+    Robot.rollers.caviera();
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
+   end();
   }
 }

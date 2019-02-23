@@ -16,8 +16,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Lift extends Subsystem {
   private Compressor CompressorOne = new Compressor(0);
-  private Solenoid RearOne = new Solenoid(3);
-  private Solenoid MiddlesoulSolenoid  = new Solenoid(4);
+  public Solenoid RearOne = new Solenoid(3);
+  public Solenoid MiddlesoulSolenoid  = new Solenoid(4);
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 

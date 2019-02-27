@@ -65,7 +65,6 @@ public class OI {
         // Driver train, elevator, pistons (lifting)
         controller0 = new Joystick(0);
         
-        // 
         JoystickButton buttonA_1 = new JoystickButton(controller0, 1);
         JoystickButton buttonB_1 = new JoystickButton(controller0, 2);
         JoystickButton buttonX_1 = new JoystickButton(controller0, 3);
@@ -77,7 +76,7 @@ public class OI {
         JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
         JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
-        //buttonA_1.whileHeld(new IntakeHatchIn());
+        buttonA_1.whileHeld(new CompressorOn());
         buttonB_1.whileHeld(new IntakeHatchIn());
         //buttonX_1.whileHeld(new ElevatorDown());
         //buttonY_1.whileHeld(new ElevatorUp());
@@ -105,18 +104,8 @@ public class OI {
         buttonX_2.whileHeld(new BallEscape());
         //buttonLeftBumper_2.whileHeld(new  RearLiftUp());
         //buttonRightBumper_2.whileHeld(new RearliftDown());
-        buttonStart_2.whileHeld(new ArmUp());
-        buttonOption_2.whileHeld(new ArmDown());
-        
-        
-        
-
-
-
-
-        // SmartDashboard Buttons
-        SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
-        SmartDashboard.putData("DefaultDrive", new DefaultDrive());
+        //buttonStart_2.whileHeld(new ArmUp());
+        //buttonOption_2.whileHeld(new ArmDown());
 
     }
 

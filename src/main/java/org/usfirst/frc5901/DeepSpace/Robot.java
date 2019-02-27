@@ -58,12 +58,12 @@ public class Robot extends TimedRobot {
         drivetrain = new Drivetrain();
         hatchIntake = new HatchIntake();
         elevator = new Elevator();
-        //Robot.hatchIntake.CompressorOff();
+        Robot.hatchIntake.CompressorOff();
         rollers=new Rollers();
         forearm=new Forearm();
         lift=new Lift();
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-        camera.setResolution(320, 320);
+        camera.setResolution(128, 240);
         camera.setFPS(15);
        
             

@@ -18,7 +18,7 @@ import org.usfirst.frc5901.DeepSpace.commands.*;
 /**
  * Add your docs here.
  */
-public class Elevator extends Subsystem {
+public class Elevator extends Subsystem implements MotorSpeeds {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -45,13 +45,13 @@ public class Elevator extends Subsystem {
   }
 
   public void elevatorUp(){
-    leftElevatorMotor.set(-0.4);
-    rightElevatorMotor.set(-0.4);
+    leftElevatorMotor.set(-elevatorUp);
+    rightElevatorMotor.set(-elevatorUp);
   }
 
   public void elevatorDown(){
-    leftElevatorMotor.set(0.3);
-    rightElevatorMotor.set(0.3);
+    leftElevatorMotor.set(elevatorDown);
+    rightElevatorMotor.set(elevatorDown);
   }
 
   @Override

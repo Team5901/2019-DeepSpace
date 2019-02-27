@@ -156,25 +156,20 @@ public class Drivetrain extends Subsystem implements MotorSpeeds{
 
          //Slow down if pistons are deployed
          if (Robot.lift.RearOne.get() || Robot.lift.MiddlesoulSolenoid.get()){
-            cougarDrive.arcadeDrive(slowDrive*move, slowDrive*rotate, true);
-
-            //Right bumper = drive slower
-            if (Robot.oi.controller1.getRawButton(6)){
-                cougarDrive.arcadeDrive(slowDrive*move, slowDrive*rotate, true);
-            }
+            cougarDrive.arcadeDrive(-slowDrive*move, slowDrive*rotate, true);
 
             //Right Trigger = slowly turn right
-            else if (Robot.oi.controller1.getRawAxis(3) > 0.3){
+            if (Robot.oi.controller1.getRawAxis(2) > 0.3){
                 cougarDrive.arcadeDrive(0, slowDrive, true);
             }
             
             //Left Trigger = slowly turn left
             else if (Robot.oi.controller1.getRawAxis(3) < -0.3){
-                cougarDrive.arcadeDrive(0, -slowDrive, true);
+                cougarDrive.arcadeDrive(0, slowDrive, true);
             }
             //Default - drive normally
             else{					
-                cougarDrive.arcadeDrive(move, rotate, true);
+                cougarDrive.arcadeDrive(-move, rotate, true);
             }	
         }	
      }

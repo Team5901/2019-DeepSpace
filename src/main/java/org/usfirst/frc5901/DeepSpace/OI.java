@@ -76,16 +76,19 @@ public class OI {
         JoystickButton buttonRightTrigger_1= new JoystickButton(controller0, 6);
         JoystickButton buttonStart_1= new JoystickButton(controller0, 7);
         JoystickButton buttonOption_1= new JoystickButton(controller0, 8);
+        JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
+        JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
-        buttonA_1.whileHeld(new IntakeHatchIn());
-        buttonB_1.whileHeld(new CompressorON());
-        buttonX_1.whileHeld(new ElevatorDown());
-        buttonY_1.whileHeld(new ElevatorUp());
-        buttonLeftTrigger_1.whileHeld(new  RearLiftUp());
-        buttonRightTrigger_1.whileHeld(new RearliftDown());
-        buttonStart_1.whileHeld(new MiddleLiftDown());
-        buttonOption_1.whileHeld(new MiddleLiftUp());
-        
+        //buttonA_1.whileHeld(new IntakeHatchIn());
+        buttonB_1.whileHeld(new IntakeHatchIn());
+        //buttonX_1.whileHeld(new ElevatorDown());
+        //buttonY_1.whileHeld(new ElevatorUp());
+        buttonLeftTrigger_1.whileHeld(new ElevatorDown());
+        buttonRightTrigger_1.whileHeld(new ElevatorUp());
+        buttonStart_1.whileHeld(new RearLiftUp());
+        buttonOption_1.whileHeld(new RearliftDown());
+        buttonLeftStick_1.whileHeld(new MiddleLiftDown());
+        buttonRightStick_1.whileHeld(new MiddleLiftUp());
 
         controller1 = new Joystick(1);
 
@@ -94,8 +97,8 @@ public class OI {
         JoystickButton buttonX_2 = new JoystickButton(controller1, 3);
         JoystickButton buttonY_2 = new JoystickButton(controller1, 4);
         buttonB_2.whileHeld(new BallEnter());
-        buttonY_2.whileHeld(new ArmDown());
-        buttonA_2.whileHeld(new ArmUp());
+        buttonY_2.whileHeld(new ArmUp());
+        buttonA_2.whileHeld(new ArmDown());
         buttonX_2.whileHeld(new BallEscape());
         
         

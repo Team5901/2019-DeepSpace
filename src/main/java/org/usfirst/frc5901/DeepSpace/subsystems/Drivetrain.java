@@ -163,10 +163,10 @@ public class Drivetrain extends Subsystem {
          
          
          if (Robot.oi.controller0.getRawButton(6)){
-            cougarDrive.arcadeDrive(move, rotate, true);
-         }
+            cougarDrive.arcadeDrive(-move, rotate, true);
+         }         
          else{					
-            cougarDrive.arcadeDrive(move*precisionDriveAmount, rotate*precisionDriveAmount,true);
+            cougarDrive.arcadeDrive(-move*precisionDriveAmount, rotate*precisionDriveAmount,true);
          }		
      }
      
@@ -214,7 +214,7 @@ public class Drivetrain extends Subsystem {
          //if (targetExist==1) {
              if( x < -1 || x > 1) {
                  System.out.println("AutoAim: "+ x);
-                 cougarDrive.arcadeDrive(0.2,limitTurn(x*.04)+Math.signum(x)*.07,true); 						// turn towards angleTarget
+                 cougarDrive.arcadeDrive(-0.2,limitTurn(x*.04)+Math.signum(x)*.07,true); 						// turn towards angleTarget
                  Timer.delay(0.004);	   
              }
          /*}

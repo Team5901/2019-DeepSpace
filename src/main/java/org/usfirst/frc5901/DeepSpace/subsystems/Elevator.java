@@ -7,6 +7,7 @@
 
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
@@ -28,14 +29,14 @@ public class Elevator extends Subsystem {
 
     leftElevatorMotor = new WPI_TalonSRX(5);
     rightElevatorMotor = new WPI_TalonSRX(7);
-
-    int sensorPos=0;
-    leftElevatorMotor.setSelectedSensorPosition(sensorPos, 0,10);
+    leftElevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0,0);
+    //int sensorPos=0;
+    //leftElevatorMotor.setSelectedSensorPosition(sensorPos, 0,10);
     //rightElevatorMotor.set(com.ctre.phoenix.motorcontrol.ControlMode.Follower, 5);
     //leftElevatorMotor.configForwardSoftLimitThreshold(10000,0);
     //leftElevatorMotor.configReverseSoftLimitThreshold(0,0);
-    leftElevatorMotor.configForwardSoftLimitEnable(false, 0);
-    leftElevatorMotor.configReverseSoftLimitEnable(false, 0);
+    //leftElevatorMotor.configForwardSoftLimitEnable(false, 0);
+    //leftElevatorMotor.configReverseSoftLimitEnable(false, 0);
   }
 
   public void elevatorStop(){

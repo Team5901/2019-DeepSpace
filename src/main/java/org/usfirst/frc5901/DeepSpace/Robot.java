@@ -58,7 +58,7 @@ public class Robot extends TimedRobot {
         drivetrain = new Drivetrain();
         hatchIntake = new HatchIntake();
         elevator = new Elevator();
-        Robot.hatchIntake.CompressorOff();
+        //Robot.hatchIntake.CompressorOff();
         rollers=new Rollers();
         forearm=new Forearm();
         lift=new Lift();

@@ -76,7 +76,7 @@ public class OI {
         JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
         JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
-        buttonA_1.whileHeld(new CompressorOn());
+        buttonA_1.whileHeld(new CompressorON());
         buttonB_1.whileHeld(new IntakeHatchIn());
         //buttonX_1.whileHeld(new ElevatorDown());
         //buttonY_1.whileHeld(new ElevatorUp());

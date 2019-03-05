@@ -150,28 +150,28 @@ public class Drivetrain extends Subsystem implements MotorSpeeds{
      //%%%%%%%%%% Main driving command - has turbo button. Press for slower control %%%%%%%%%%
      public void drive(){
          
-         move = Robot.oi.controller1.getRawAxis(1);
-         rotate = Robot.oi.controller1.getRawAxis(4);             
+         move = Robot.oi.controller0.getRawAxis(1);
+         rotate = Robot.oi.controller0.getRawAxis(4);             
          
 
          //Slow down if pistons are deployed
-         if (Robot.lift.RearOne.get() || Robot.lift.MiddlesoulSolenoid.get()){
-            cougarDrive.arcadeDrive(-slowDrive*move, slowDrive*rotate, true);
+         //if (Robot.lift.RearOne.get() || Robot.lift.MiddlesoulSolenoid.get()){
+            //cougarDrive.arcadeDrive(-slowDrive*move, slowDrive*rotate, true);
 
             //Right Trigger = slowly turn right
-            if (Robot.oi.controller1.getRawAxis(2) > 0.3){
-                cougarDrive.arcadeDrive(0, slowDrive, true);
-            }
+            //if (Robot.oi.controller1.getRawAxis(2) > 0.3){
+            //    cougarDrive.arcadeDrive(0, slowDrive, true);
+            //}
             
             //Left Trigger = slowly turn left
-            else if (Robot.oi.controller1.getRawAxis(3) < -0.3){
-                cougarDrive.arcadeDrive(0, slowDrive, true);
-            }
+            //else if (Robot.oi.controller1.getRawAxis(3) < -0.3){
+            //    cougarDrive.arcadeDrive(0, slowDrive, true);
+            //}
             //Default - drive normally
-            else{					
+            //else{					
                 cougarDrive.arcadeDrive(-move, rotate, true);
-            }	
-        }	
+            //}	
+        //}	
      }
      
      //%%%%%%%%%% Stops all motors %%%%%%%%%%

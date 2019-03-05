@@ -45,12 +45,12 @@ public class Elevator extends Subsystem implements MotorSpeeds {
   }
 
   public void elevatorUp(){
-    leftElevatorMotor.set(-elevatorUp);
+    leftElevatorMotor.set(elevatorUp);
     rightElevatorMotor.set(-elevatorUp);
   }
 
   public void elevatorDown(){
-    leftElevatorMotor.set(elevatorDown);
+    leftElevatorMotor.set(-elevatorDown);
     rightElevatorMotor.set(elevatorDown);
   }
 

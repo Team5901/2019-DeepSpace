@@ -23,25 +23,21 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class HatchIntake extends Subsystem {
   private Compressor CompressorOne = new Compressor(0);
-  private DoubleSolenoid DoubleOne = new DoubleSolenoid(1,2);
+  private Solenoid SingleOne = new Solenoid(1);
 
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  public void IntakeHatchOut(){
-    DoubleOne.set(DoubleSolenoid.Value.kReverse);
-  }
-
-  public void IntakeHatchIn(){
-    DoubleOne.set(DoubleSolenoid.Value.kForward);
-  }
+  
 
   public void PistonIn(){
-   DoubleOne.set(DoubleSolenoid.Value.kForward);
+    System.out.println("PistonIn");
+    SingleOne.set(true);
   }   
 
   public void PistonOut(){
-    DoubleOne.set(DoubleSolenoid.Value.kReverse);
+    System.out.println("PistonOut");
+    SingleOne.set(false);
   }
 
   public void CompressorOn(){

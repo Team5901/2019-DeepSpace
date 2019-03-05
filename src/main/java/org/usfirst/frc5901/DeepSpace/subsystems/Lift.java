@@ -30,10 +30,10 @@ public void DropRear() {
 }
 
 public void RaiseMiddleSolenoid(){
-  MiddlesoulSolenoid.set(true);
+  MiddlesoulSolenoid.set(false);
 }
 public void DropMiddleSolenoid() {
-  MiddlesoulSolenoid.set(false);
+  MiddlesoulSolenoid.set(true);
 
 }
 

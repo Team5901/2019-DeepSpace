@@ -99,8 +99,8 @@ public class OI {
         JoystickButton buttonOption_2= new JoystickButton(controller1, 8);
 
         buttonB_2.whileHeld(new BallEnter());
-        buttonY_2.whileHeld(new ArmUp());
-        buttonA_2.whileHeld(new ArmDown());
+        buttonY_2.whileHeld(new ArmDown());
+        buttonA_2.whileHeld(new ArmUp());
         buttonX_2.whileHeld(new BallEscape());
         //buttonLeftBumper_2.whileHeld(new  RearLiftUp());
         //buttonRightBumper_2.whileHeld(new RearliftDown());

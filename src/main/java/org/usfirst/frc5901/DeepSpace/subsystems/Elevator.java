@@ -8,6 +8,7 @@
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
@@ -46,13 +47,36 @@ public class Elevator extends Subsystem implements MotorSpeeds {
 
   public void elevatorUp(){
     leftElevatorMotor.set(elevatorUp);
-    rightElevatorMotor.set(-elevatorUp);
+    rightElevatorMotor.set(elevatorUp);
   }
 
   public void elevatorDown(){
-    leftElevatorMotor.set(-elevatorDown);
+    leftElevatorMotor.set(  elevatorDown);
     rightElevatorMotor.set(elevatorDown);
   }
+
+  public void LevelZero(){
+    if (elvator h>= 90) {
+      leftElevatorMotor.set(  elevatorDown);
+      rightElevatorMotor.set(elevatorDown);
+    }
+    else if (testscore >= 80) {
+      grade = 'B';
+    }
+    else{
+        grade =  'C';  
+    }
+    
+    leftElevatorMotor.set(0.0);
+    rightElevatorMotor.set(0.0);
+
+   public void LevelOne(){
+   leftElevatorMotor.set(0.0);
+   rightElevatorMotor.set(0.0);
+
+  }
+
+
 
   @Override
   public void initDefaultCommand() {

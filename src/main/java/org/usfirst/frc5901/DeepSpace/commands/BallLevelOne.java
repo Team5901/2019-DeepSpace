@@ -4,19 +4,17 @@
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
-// level 2 ball
+
 package org.usfirst.frc5901.DeepSpace.commands;
 
 import org.usfirst.frc5901.DeepSpace.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-// LEVEL ONE FOR ELEVATOR
-public class ZetharsLevitacus extends Command {
-  public ZetharsLevitacus() {
+public class BallLevelOne extends Command {
+  public BallLevelOne() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.elevator);
   }
 
   // Called just before this Command runs the first time
@@ -26,7 +24,8 @@ public class ZetharsLevitacus extends Command {
 
   // Called repeatedly when this Command is scheduled to run
   @Override
-  protected void execute() {
+  protected void execute() { 
+    Robot.elevator.BallLvlOne();
   }
 
   // Make this return true when this Command no longer needs to run execute()

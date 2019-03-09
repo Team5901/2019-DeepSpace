@@ -10,10 +10,9 @@ package org.usfirst.frc5901.DeepSpace.commands;
 import org.usfirst.frc5901.DeepSpace.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-
-// LEVEL THREE OF ELEVATOR
-public class Jordanswords extends Command {
-  public Jordanswords() {
+// LEVEL TWO OF ELEVATOR
+public class ElevatorLevelTwoHatch extends Command {
+  public ElevatorLevelTwoHatch() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
     requires(Robot.elevator);
@@ -27,11 +26,12 @@ public class Jordanswords extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.elevator.HatchLvl2();
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
-  protected boolean isFinished() {
+  protected boolean isFinished() { 
     return false;
   }
 

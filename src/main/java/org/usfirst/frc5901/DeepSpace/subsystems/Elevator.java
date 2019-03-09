@@ -55,17 +55,10 @@ public class Elevator extends Subsystem implements MotorSpeeds {
     leftElevatorMotor.set(elevatorDown);
     rightElevatorMotor.set(elevatorDown);
   }
-<<<<<<< HEAD
-/*
-  public void LevelZero(){
-    if (elvator h>= 90) {
-      leftElevatorMotor.set(  elevatorDown);
-=======
 
   public void HatchLvl2(){
     if (leftElevatorMotor.getSelectedSensorPosition() >= 80) {
       leftElevatorMotor.set(elevatorDown);
->>>>>>> 62592b605bc65cebc29d7f0bb5bfabfc2e46c35f
       rightElevatorMotor.set(elevatorDown);
     }
     else if(leftElevatorMotor.getSelectedSensorPosition()<= 70) {
@@ -76,16 +69,6 @@ public class Elevator extends Subsystem implements MotorSpeeds {
       leftElevatorMotor.set(0.0);
       rightElevatorMotor.set(0.0);
     }
-<<<<<<< HEAD
-    
-    leftElevatorMotor.set(0.0);
-    rightElevatorMotor.set(0.0);
-*/
-   public void LevelOne(){
-   leftElevatorMotor.set(0.0);
-   rightElevatorMotor.set(0.0);
-=======
->>>>>>> 62592b605bc65cebc29d7f0bb5bfabfc2e46c35f
 
   }
   public void BallLevel2(){
@@ -125,13 +108,5 @@ public class Elevator extends Subsystem implements MotorSpeeds {
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand()
-    
-    
-    
-    
-    
-    
-    
-    
-  }
+
 }

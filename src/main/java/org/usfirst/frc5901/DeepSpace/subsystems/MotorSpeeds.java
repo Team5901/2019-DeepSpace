@@ -9,7 +9,7 @@ public interface MotorSpeeds {
     static final double yoboimovin =0.7;
     static final double backupbro = -0.7;
     static final double slowDrive = 0.5;
-    static final double elevatorUp = 0.5;
-    static final double elevatorDown = 0.4;
+    static final double elevatorUp = 0.2;
+    static final double elevatorDown = 0.2;
    
 }

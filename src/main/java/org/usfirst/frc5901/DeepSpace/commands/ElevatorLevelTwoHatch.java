@@ -9,6 +9,7 @@ package org.usfirst.frc5901.DeepSpace.commands;
 
 import org.usfirst.frc5901.DeepSpace.Robot;
 
+import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import edu.wpi.first.wpilibj.command.Command;
 // LEVEL TWO OF ELEVATOR
 public class ElevatorLevelTwoHatch extends Command {
@@ -38,11 +39,16 @@ public class ElevatorLevelTwoHatch extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    Robot.elevator.elevatorStop();
+    Robot.oi.controller0.setRumble(RumbleType.kLeftRumble,0);
   }
+
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
-  protected void interrupted() {
+  protected void interrupted() { 
+    end();
   }
+  
 }

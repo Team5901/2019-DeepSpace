@@ -13,6 +13,8 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import org.usfirst.frc5901.DeepSpace.Robot;
+
+import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc5901.DeepSpace.commands.*;
 
@@ -85,21 +87,23 @@ public class Elevator extends Subsystem implements MotorSpeeds {
       rightElevatorMotor.set(0.0);
     }
   }
-      public void BallLvlOne(){
-        if (leftElevatorMotor.getSelectedSensorPosition() >= 80) {
-          leftElevatorMotor.set(elevatorDown);
-          rightElevatorMotor.set(elevatorDown);
-        }
-        else if(leftElevatorMotor.getSelectedSensorPosition()<= 70) {
-          leftElevatorMotor.set(elevatorUp);
-          rightElevatorMotor.set(elevatorUp);
-        }
-        else{
-          leftElevatorMotor.set(0.0);
-          rightElevatorMotor.set(0.0);
-        }
-      }
 
+  public void BallLvlOne(){
+    if (leftElevatorMotor.getSelectedSensorPosition() >= 80) {
+      leftElevatorMotor.set(elevatorDown);
+      rightElevatorMotor.set(elevatorDown);
+    }
+    else if(leftElevatorMotor.getSelectedSensorPosition()<= 70) {
+      leftElevatorMotor.set(elevatorUp);
+      rightElevatorMotor.set(elevatorUp);
+    }
+    else{
+      leftElevatorMotor.set(0.0);
+      rightElevatorMotor.set(0.0);
+      Robot.oi.controller0.setRumble(RumbleType.kLeftRumble,1);
+    }
+      
+  }
 
 
 

@@ -27,7 +27,6 @@ public class RearLiftUp extends Command {
   @Override
   protected void execute() {
     Robot.lift.RaiseRear();
-    cougarDrive.arcadeDrive(0.5, 0, true);
   }
 
   // Make this return true when this Command no longer needs to run execute()

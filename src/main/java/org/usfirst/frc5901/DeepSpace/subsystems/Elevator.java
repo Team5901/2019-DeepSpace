@@ -54,7 +54,7 @@ public class Elevator extends Subsystem implements MotorSpeeds {
   }
 
   public void elevatorDown(){
-    leftElevatorMotor.set(  elevatorDown);
+    leftElevatorMotor.set(elevatorDown);
     rightElevatorMotor.set(elevatorDown);
   }
 
@@ -112,13 +112,6 @@ public class Elevator extends Subsystem implements MotorSpeeds {
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand()
-    
-    
-    
-    
-    
-    
-    
-    
+
   }
 }

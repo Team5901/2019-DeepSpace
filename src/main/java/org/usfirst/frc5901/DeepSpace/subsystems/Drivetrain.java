@@ -214,23 +214,28 @@ public class Drivetrain extends Subsystem implements MotorSpeeds{
          double area = ta.getDouble(0);
          double targetExist = tv.getDouble(0);
          
-         System.out.println("Attempting Autoaim..." + targetExist);
-         //if (targetExist==1) {
-             if( x < -1 || x > 1) {
+         if (targetExist==1) {
                  System.out.println("AutoAim: "+ x);
-                 cougarDrive.arcadeDrive(-0.2,limitTurn(x*.04)+Math.signum(x)*.07,true); 						// turn towards angleTarget
-                 Timer.delay(0.004);	   
-             }
-         /*}
+                 cougarDrive.arcadeDrive(-0.4,limitTurn(x*.04)+Math.signum(x)*.07,true); 						// turn towards angleTarget
+                 //Timer.delay(0.004);	   
+         }
          else {
-             System.out.println("TargetDoesntExist: "+ x);
+            cougarDrive.arcadeDrive(-0.2,0.0,true);
+            System.out.println("TargetDoesntExist: "+ x);
              
-         }*/
-             
-         
- 
+         }        
      
-	}
+    }
+    public void LimelightOn(){
+        NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(3);
+    }
+    public void LimelightOff(){
+        NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(1);
 
-}
+    }
+
+ 
+    }
+    
+
 

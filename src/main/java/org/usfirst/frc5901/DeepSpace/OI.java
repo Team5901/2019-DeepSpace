@@ -78,7 +78,7 @@ public class OI {
         
         buttonA_1.whileHeld(new CompressorON());
         buttonB_1.whileHeld(new IntakeHatchIn());
-        //buttonX_1.whileHeld(new ElevatorDown());
+        buttonX_1.whileHeld(new Autoaim());
         //buttonY_1.whileHeld(new ElevatorUp());
         buttonLeftBumper_1.whileHeld(new ElevatorDown());
         buttonRightBumper_1.whileHeld(new ElevatorUp());

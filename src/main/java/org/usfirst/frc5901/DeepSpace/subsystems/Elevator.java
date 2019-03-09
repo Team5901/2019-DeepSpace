@@ -51,10 +51,10 @@ public class Elevator extends Subsystem implements MotorSpeeds {
   }
 
   public void elevatorDown(){
-    leftElevatorMotor.set(  elevatorDown);
+    leftElevatorMotor.set(elevatorDown);
     rightElevatorMotor.set(elevatorDown);
   }
-
+/*
   public void LevelZero(){
     if (elvator h>= 90) {
       leftElevatorMotor.set(  elevatorDown);
@@ -69,7 +69,7 @@ public class Elevator extends Subsystem implements MotorSpeeds {
     
     leftElevatorMotor.set(0.0);
     rightElevatorMotor.set(0.0);
-
+*/
    public void LevelOne(){
    leftElevatorMotor.set(0.0);
    rightElevatorMotor.set(0.0);

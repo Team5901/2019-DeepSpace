@@ -20,6 +20,8 @@ public class Autoaim extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    System.out.println("Limelight is ON");
+    Robot.drivetrain.LimelightOn();
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -37,6 +39,8 @@ public class Autoaim extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    System.out.println("Limelight is OFF");
+    Robot.drivetrain.LimelightOff();
     Robot.drivetrain.stopDrive();
   }
 
@@ -44,5 +48,6 @@ public class Autoaim extends Command {
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
+    end();
   }
 }

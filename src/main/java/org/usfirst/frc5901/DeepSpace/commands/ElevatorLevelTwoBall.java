@@ -8,11 +8,13 @@
 package org.usfirst.frc5901.DeepSpace.commands;
 
 import org.usfirst.frc5901.DeepSpace.Robot;
+import org.usfirst.frc5901.DeepSpace.subsystems.Elevator;
 
 import edu.wpi.first.wpilibj.command.Command;
-// LEVEL TWO OF ELEVATOR
-public class Lesonsnumbers extends Command {
-  public Lesonsnumbers() {
+
+// LEVEL THREE OF ELEVATOR
+public class ElevatorLevelTwoBall extends Command {
+  public ElevatorLevelTwoBall() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
     requires(Robot.elevator);
@@ -25,12 +27,12 @@ public class Lesonsnumbers extends Command {
 
   // Called repeatedly when this Command is scheduled to run
   @Override
-  protected void execute() {
+  protected void execute() {Robot.elevator.BallLevel2();
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
-  protected boolean isFinished() {
+  protected boolean isFinished() { 
     return false;
   }
 

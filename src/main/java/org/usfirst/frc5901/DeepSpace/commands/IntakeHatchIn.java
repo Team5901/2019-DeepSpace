@@ -21,14 +21,14 @@ public class IntakeHatchIn extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.println("HatchIntakeIn");
+    System.out.println("PistonIn");
 
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.hatchIntake.PistonOut();
+    Robot.hatchIntake.PistonIn();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -40,8 +40,8 @@ public class IntakeHatchIn extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    System.out.println("HatchOut");
-    Robot.hatchIntake.PistonIn();
+    System.out.println("HatchIn");
+    Robot.hatchIntake.PistonOut();
   }
 
   // Called when another command which requires one or more of the same

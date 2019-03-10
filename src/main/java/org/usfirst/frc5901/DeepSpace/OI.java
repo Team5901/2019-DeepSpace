@@ -76,9 +76,9 @@ public class OI {
         JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
         JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
-        buttonA_1.whileHeld(new CompressorOn());
+        buttonA_1.whileHeld(new CompressorON());
         buttonB_1.whileHeld(new IntakeHatchIn());
-        //buttonX_1.whileHeld(new ElevatorDown());
+        buttonX_1.whileHeld(new Autoaim());
         //buttonY_1.whileHeld(new ElevatorUp());
         buttonLeftBumper_1.whileHeld(new ElevatorDown());
         buttonRightBumper_1.whileHeld(new ElevatorUp());
@@ -99,8 +99,8 @@ public class OI {
         JoystickButton buttonOption_2= new JoystickButton(controller1, 8);
 
         buttonB_2.whileHeld(new BallEnter());
-        buttonY_2.whileHeld(new ArmUp());
-        buttonA_2.whileHeld(new ArmDown());
+        buttonY_2.whileHeld(new ArmDown());
+        buttonA_2.whileHeld(new ArmUp());
         buttonX_2.whileHeld(new BallEscape());
         //buttonLeftBumper_2.whileHeld(new  RearLiftUp());
         //buttonRightBumper_2.whileHeld(new RearliftDown());

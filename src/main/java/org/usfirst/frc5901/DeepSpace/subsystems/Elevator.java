@@ -8,10 +8,13 @@
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import org.usfirst.frc5901.DeepSpace.Robot;
+
+import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc5901.DeepSpace.commands.*;
 
@@ -39,14 +42,15 @@ public class Elevator extends Subsystem implements MotorSpeeds {
     //leftElevatorMotor.configReverseSoftLimitEnable(false, 0);
   }
 
+
   public void elevatorStop(){
     leftElevatorMotor.set(0.0);
     rightElevatorMotor.set(0.0);
   }
 
   public void elevatorUp(){
-    leftElevatorMotor.set(-elevatorUp);
-    rightElevatorMotor.set(-elevatorUp);
+    leftElevatorMotor.set(elevatorUp);
+    rightElevatorMotor.set(elevatorUp);
   }
 
   public void elevatorDown(){
@@ -54,17 +58,60 @@ public class Elevator extends Subsystem implements MotorSpeeds {
     rightElevatorMotor.set(elevatorDown);
   }
 
-  @Override
+  public void HatchLvl2(){
+    if (leftElevatorMotor.getSelectedSensorPosition() >= 80) {
+      leftElevatorMotor.set(elevatorDown);
+      rightElevatorMotor.set(elevatorDown);
+    }
+    else if(leftElevatorMotor.getSelectedSensorPosition()<= 70) {
+      leftElevatorMotor.set(elevatorUp);
+      rightElevatorMotor.set(elevatorUp);
+    }
+    else{
+      leftElevatorMotor.set(0.0);
+      rightElevatorMotor.set(0.0);
+    }
+
+  }
+  public void BallLevel2(){
+    if (leftElevatorMotor.getSelectedSensorPosition() >= 80) {
+      leftElevatorMotor.set(elevatorDown);
+      rightElevatorMotor.set(elevatorDown);
+    }
+    else if(leftElevatorMotor.getSelectedSensorPosition()<= 70) {
+      leftElevatorMotor.set(elevatorUp);
+      rightElevatorMotor.set(elevatorUp);
+    }
+    else{
+      leftElevatorMotor.set(0.0);
+      rightElevatorMotor.set(0.0);
+    }
+  }
+
+  public void BallLvlOne(){
+    if (leftElevatorMotor.getSelectedSensorPosition() >= 80) {
+      leftElevatorMotor.set(elevatorDown);
+      rightElevatorMotor.set(elevatorDown);
+    }
+    else if(leftElevatorMotor.getSelectedSensorPosition()<= 70) {
+      leftElevatorMotor.set(elevatorUp);
+      rightElevatorMotor.set(elevatorUp);
+    }
+    else{
+      leftElevatorMotor.set(0.0);
+      rightElevatorMotor.set(0.0);
+      Robot.oi.controller0.setRumble(RumbleType.kLeftRumble,1);
+    }
+      
+  }
+
+
+
+
+ @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand()
-    
-    
-    
-    
-    
-    
-    
-    
+
   }
 }

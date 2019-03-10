@@ -21,6 +21,7 @@ public class RearLiftUp extends Command {
   @Override
   protected void initialize() {
     System.out.println("RaiseRear");
+    Robot.lift.RaiseRear();
   }
 
   // Called repeatedly when this Command is scheduled to run

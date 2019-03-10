@@ -30,8 +30,6 @@ public class BallEscape extends Command {
     Robot.rollers.whitehole();
   }
 
-
-
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
@@ -41,9 +39,8 @@ public class BallEscape extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-   System.out.println("Ball stop");
-      Robot.rollers.caviera(); 
-
+    System.out.println("Ball stop");
+    Robot.rollers.caviera(); 
    
   }
   // Called when another command which requires one or more of the same

@@ -18,19 +18,12 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /**
  * Add your docs here.
  */
-public class Forearm extends Subsystem implements SolenoidState {
+public class Forearm extends Subsystem implements MotorSpeeds{
 
   private WPI_TalonSRX ForearmMotor;
 
   public Forearm() {
     ForearmMotor=new WPI_TalonSRX(6);
-    
-    //int sensorPos=0;
-    //ForearmMotor.setSelectedSensorPosition(sensorPos, 0,10);
-    //ForearmMotor.configForwardSoftLimitThreshold(10,0);
-    //ForearmMotor.configReverseSoftLimitThreshold(-10,0);
-    //ForearmMotor.configForwardSoftLimitEnable(true,0);
-    //ForearmMotor.configReverseSoftLimitEnable(true,0);
 
   }
   // Put methods for controlling this subsystem
@@ -43,11 +36,11 @@ public class Forearm extends Subsystem implements SolenoidState {
   }
 
   public void RiseArm() {
-    ForearmMotor.set(-0.2);
+    ForearmMotor.set(wristUpSpeed);
   }
    
   public void FallArm(){
-   ForearmMotor.set(0.2);
+   ForearmMotor.set(wristDownSpeed);
   }
 
   public void StopArm(){

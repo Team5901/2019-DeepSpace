@@ -39,7 +39,6 @@ public class ElevatorDown extends Command {
   @Override
   protected void end() {
     Robot.elevator.elevatorStop();
-    System.out.println("STOP elevator");
   }
 
   // Called when another command which requires one or more of the same

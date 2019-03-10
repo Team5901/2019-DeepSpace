@@ -70,6 +70,7 @@ public class Elevator extends Subsystem implements MotorSpeeds {
     else{
       leftElevatorMotor.set(0.0);
       rightElevatorMotor.set(0.0);
+      Robot.oi.controller0.setRumble(RumbleType.kLeftRumble,1);
     }
 
   }
@@ -85,6 +86,7 @@ public class Elevator extends Subsystem implements MotorSpeeds {
     else{
       leftElevatorMotor.set(0.0);
       rightElevatorMotor.set(0.0);
+      Robot.oi.controller0.setRumble(RumbleType.kLeftRumble,1);
     }
   }
 

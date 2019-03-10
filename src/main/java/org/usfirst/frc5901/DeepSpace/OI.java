@@ -60,9 +60,9 @@ public class OI {
 
     public OI() {
         
-        // First Controller 
-        // Functionality:
-        // Driver train, elevator, pistons (lifting)
+        /*#########################################
+        ##### DRIVER - DRIVE, ELEVATOR, HATCH #####
+        #########################################*/
         controller0 = new Joystick(0);
         
         JoystickButton buttonA_1 = new JoystickButton(controller0, 1);
@@ -76,16 +76,20 @@ public class OI {
         JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
         JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
-        buttonA_1.whileHeld(new CompressorON());
+        buttonA_1.whileHeld(new ElevatorLevelTwoHatch());
         buttonB_1.whileHeld(new IntakeHatchIn());
-        buttonX_1.whileHeld(new Autoaim());
-        //buttonY_1.whileHeld(new ElevatorUp());
+        buttonX_1.whileHeld(new BallLevelOne());
+        buttonY_1.whileHeld(new ElevatorLevelTwoBall());
         buttonLeftBumper_1.whileHeld(new ElevatorDown());
         buttonRightBumper_1.whileHeld(new ElevatorUp());
-        buttonStart_1.whileHeld(new RearLiftUp());
-        buttonOption_1.whileHeld(new RearliftDown());
-        buttonLeftStick_1.whileHeld(new MiddleLiftDown());
-        buttonRightStick_1.whileHeld(new MiddleLiftUp());
+        //buttonStart_1.whileHeld(new RearLiftUp());
+        //buttonOption_1.whileHeld(new RearliftDown());
+        buttonLeftStick_1.whileHeld(new Autoaim());
+        //buttonRightStick_1.whileHeld(new MiddleLiftUp());
+
+        /*##############################################
+        ##### OPERATOR - BALL INTAKE, ARM, PISTONS #####
+        ##############################################*/
 
         controller1 = new Joystick(1);
 
@@ -98,14 +102,16 @@ public class OI {
         JoystickButton buttonStart_2= new JoystickButton(controller1, 7);
         JoystickButton buttonOption_2= new JoystickButton(controller1, 8);
 
-        buttonB_2.whileHeld(new BallEnter());
-        buttonY_2.whileHeld(new ArmDown());
         buttonA_2.whileHeld(new ArmUp());
+        buttonB_2.whileHeld(new BallEnter());
         buttonX_2.whileHeld(new BallEscape());
-        //buttonLeftBumper_2.whileHeld(new  RearLiftUp());
-        //buttonRightBumper_2.whileHeld(new RearliftDown());
-        //buttonStart_2.whileHeld(new ArmUp());
-        //buttonOption_2.whileHeld(new ArmDown());
+        buttonY_2.whileHeld(new ArmDown());
+        //buttonLeftBumper_2.whileHeld(new ElevatorDown());
+        buttonRightBumper_2.whileHeld(new CompressorOn());
+        buttonStart_2.whileHeld(new MiddleLiftUp());
+        buttonOption_2.whileHeld(new RearliftDown());
+        buttonLeftStick_2.whileHeld(new MiddleLiftDown());
+        buttonRightStick_2.whileHeld(new RearLiftUp());
 
     }
 

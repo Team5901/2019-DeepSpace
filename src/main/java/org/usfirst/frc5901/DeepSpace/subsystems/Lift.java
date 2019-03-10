@@ -15,7 +15,6 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class Lift extends Subsystem {
-  private Compressor CompressorOne = new Compressor(0);
   public Solenoid RearOne = new Solenoid(3);
   public Solenoid MiddlesoulSolenoid  = new Solenoid(4);
   // Put methods for controlling this subsystem
@@ -26,15 +25,14 @@ public void RaiseRear(){
 }
 public void DropRear() {
   RearOne.set(false);
-
 }
 
 public void RaiseMiddleSolenoid(){
   MiddlesoulSolenoid.set(false);
 }
+
 public void DropMiddleSolenoid() {
   MiddlesoulSolenoid.set(true);
-
 }
 
   @Override

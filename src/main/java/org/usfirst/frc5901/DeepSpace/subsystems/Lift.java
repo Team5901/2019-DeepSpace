@@ -21,10 +21,10 @@ public class Lift extends Subsystem {
   // here. Call these from Commands.
 
 public void RaiseRear(){
-  RearOne.set(true);
+  RearOne.set(false);
 }
 public void DropRear() {
-  RearOne.set(false);
+  RearOne.set(true);
 }
 
 public void RaiseMiddleSolenoid(){

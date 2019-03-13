@@ -7,14 +7,8 @@
 
 package org.usfirst.frc5901.DeepSpace.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-
-import org.usfirst.frc5901.DeepSpace.commands.IntakeHatchIn;
-import org.usfirst.frc5901.DeepSpace.commands.IntakeHatchOut;
 
 import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 

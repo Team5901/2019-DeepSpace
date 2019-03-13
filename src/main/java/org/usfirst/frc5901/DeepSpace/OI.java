@@ -71,8 +71,8 @@ public class OI {
         JoystickButton buttonY_1 = new JoystickButton(controller0, 4);
         JoystickButton buttonLeftBumper_1 = new JoystickButton(controller0, 5);
         JoystickButton buttonRightBumper_1= new JoystickButton(controller0, 6);
-        JoystickButton buttonStart_1= new JoystickButton(controller0, 7);
-        JoystickButton buttonOption_1= new JoystickButton(controller0, 8);
+        JoystickButton buttonStart_1= new JoystickButton(controller0, 8);
+        JoystickButton buttonOption_1= new JoystickButton(controller0, 7);
         JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
         JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
@@ -99,15 +99,17 @@ public class OI {
         JoystickButton buttonY_2 = new JoystickButton(controller1, 4);
         JoystickButton buttonLeftBumper_2 = new JoystickButton(controller1, 5);
         JoystickButton buttonRightBumper_2= new JoystickButton(controller1, 6);
-        JoystickButton buttonStart_2= new JoystickButton(controller1, 7);
-        JoystickButton buttonOption_2= new JoystickButton(controller1, 8);
+        JoystickButton buttonStart_2= new JoystickButton(controller1, 8);
+        JoystickButton buttonOption_2= new JoystickButton(controller1, 7);
+        JoystickButton buttonLeftStick_2= new JoystickButton(controller1, 9);
+        JoystickButton buttonRightStick_2= new JoystickButton(controller1, 10);
 
         buttonA_2.whileHeld(new ArmDown());
         buttonB_2.whileHeld(new BallEnter());
         buttonX_2.whileHeld(new BallEscape());
         buttonY_2.whileHeld(new ArmUp());
         //buttonLeftBumper_2.whileHeld(new ElevatorDown());
-        buttonRightBumper_2.whileHeld(new CompressorOn());
+        buttonRightBumper_2.whileHeld(new CompressorON());
         buttonStart_2.whileHeld(new RearliftDown());
         buttonOption_2.whileHeld(new MiddleLiftUp());
         buttonLeftStick_2.whileHeld(new MiddleLiftDown());

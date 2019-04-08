@@ -71,10 +71,10 @@ public class OI {
         JoystickButton buttonY_1 = new JoystickButton(controller0, 4);
         JoystickButton buttonLeftBumper_1 = new JoystickButton(controller0, 5);
         JoystickButton buttonRightBumper_1= new JoystickButton(controller0, 6);
-        JoystickButton buttonStart_1= new JoystickButton(controller0, 8);
-        JoystickButton buttonOption_1= new JoystickButton(controller0, 7);
+        //JoystickButton buttonStart_1= new JoystickButton(controller0, 8);
+        //JoystickButton buttonOption_1= new JoystickButton(controller0, 7);
         JoystickButton buttonLeftStick_1= new JoystickButton(controller0, 9);
-        JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
+        //JoystickButton buttonRightStick_1= new JoystickButton(controller0, 10);
         
         buttonA_1.whileHeld(new ElevatorLevelTwoHatch());
         buttonB_1.whileHeld(new IntakeHatchIn());
@@ -97,7 +97,7 @@ public class OI {
         JoystickButton buttonB_2 = new JoystickButton(controller1, 2);
         JoystickButton buttonX_2 = new JoystickButton(controller1, 3);
         JoystickButton buttonY_2 = new JoystickButton(controller1, 4);
-        JoystickButton buttonLeftBumper_2 = new JoystickButton(controller1, 5);
+        //JoystickButton buttonLeftBumper_2 = new JoystickButton(controller1, 5);
         JoystickButton buttonRightBumper_2= new JoystickButton(controller1, 6);
         JoystickButton buttonStart_2= new JoystickButton(controller1, 8);
         JoystickButton buttonOption_2= new JoystickButton(controller1, 7);

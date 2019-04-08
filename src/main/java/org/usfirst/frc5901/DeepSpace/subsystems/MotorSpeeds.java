@@ -12,11 +12,11 @@ public interface MotorSpeeds {
     static final double backupbro = -0.7;
     
     //Elevator Speeds
-    static final double elevatorUp = 0.2;
-    static final double elevatorDown = 0.2;
+    static final double elevatorUp = 0.45;
+    static final double elevatorDown = -0.25;
 
     //Wrist Speed
-    static final double wristUpSpeed = -0.2;
-    static final double wristDownSpeed = 0.2;
+    static final double wristUpSpeed = 0.2;
+    static final double wristDownSpeed = -0.2;
    
 }

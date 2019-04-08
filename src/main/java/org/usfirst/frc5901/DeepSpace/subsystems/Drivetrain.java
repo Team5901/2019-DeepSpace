@@ -216,7 +216,7 @@ public class Drivetrain extends Subsystem implements MotorSpeeds{
          
          if (targetExist==1) {
                  System.out.println("AutoAim: "+ x);
-                 cougarDrive.arcadeDrive(0.5,limitTurn(x*.04)+Math.signum(x)*.09,true);
+                 cougarDrive.arcadeDrive(0.5,limitTurn(x*.08)+Math.signum(x)*.09,true);
                  //Timer.delay(0.004);	   
          }
          else {

@@ -226,7 +226,7 @@ public class Drivetrain extends Subsystem implements MotorSpeeds{
             System.out.println("TargetDoesntExist: "+ x);
 
          }
-        if (x > 20) {
+        if (x > 10) {
             System.out.println("Rumble: > 20");
             Robot.oi.controller0.setRumble(RumbleType.kLeftRumble,1);
             

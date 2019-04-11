@@ -16,7 +16,7 @@ public interface MotorSpeeds {
     static final double elevatorDown = -0.25;
 
     //Wrist Speed
-    static final double wristUpSpeed = 0.2;
+    static final double wristUpSpeed = 0.25;
     static final double wristDownSpeed = -0.2;
    
 }
